@@ -4,7 +4,9 @@
 # --------------------------------
 
 name: 'CI_C++'
-
+env:
+  WORKDIR: "homework-1"
+  
 on:
   push:
     branches:
@@ -19,6 +21,7 @@ jobs:
         with:
           submodules: true
       - run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
+      - run: ls -la
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       - run: cmake --build .
       - run: cmake --build . --target test
