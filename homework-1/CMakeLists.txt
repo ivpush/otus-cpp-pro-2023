@@ -63,7 +63,7 @@ set_target_properties(test_version PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
-set_target_properpies(gtest_version PROPERTIES
+set_target_properties(gtest_version PROPERTIES
     INCLUDE_DIRECTORIES("${gtest_SOURCE_DIR}/include")
 )
 
