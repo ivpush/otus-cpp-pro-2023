@@ -45,7 +45,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
-execute_process(COMMAND ls .)
+execute_process(COMMAND ls ./googletest-src ./googletest-src/googletest)
 
 message("Start making targets")
 
