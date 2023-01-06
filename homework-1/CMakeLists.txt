@@ -41,9 +41,9 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 # dependencies automatically when using CMake 2.8.11 or
 # later. Otherwise we have to add them here ourselves.
 
-if (CMAKE_VERSION VERSION_LESS 2.8.11)
-  include_directories("${gtest_SOURCE_DIR}/include")
-endif()
+##if (CMAKE_VERSION VERSION_LESS 2.8.11)
+##  include_directories("${gtest_SOURCE_DIR}/include")
+##endif()
 
 execute_process(COMMAND ls ./googletest-src ./googletest-src/googletest)
 
@@ -66,10 +66,10 @@ set_target_properties(test_version PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
-message("GInclude=${gtest_SOURCE_DIR}")
-set_target_properties(gtest_version PROPERTIES
-    INCLUDE_DIRECTORIES("${gtest_SOURCE_DIR}/include")
-)
+##message("GInclude=${gtest_SOURCE_DIR}")
+##set_target_properties(gtest_version PROPERTIES
+##    INCLUDE_DIRECTORIES("${gtest_SOURCE_DIR}/include")
+##)
 
 target_link_libraries(helloworld_cli PRIVATE
     helloworld
