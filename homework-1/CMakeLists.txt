@@ -75,8 +75,8 @@ target_link_libraries(test_version
     helloworld
 )
 target_link_libraries(gtest_version
-    gtest_version PRIVATE
     gtest gtest_main
+    helloworld
 )
 
 if (MSVC)
