@@ -7,13 +7,13 @@ project(helloworld VERSION ${PROJECT_VESRION})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
-message("Config version")
-
 configure_file(version.h.in version.h)
 
 # Download and build googletest
 # @see https://github.com/google/googletest/blob/master/googletest/README.md
 # Incorporating Into An Existing CMake Project
+
+message("Making Googletest Suite")
 
 # Download and unpack googletest at configure time
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -41,12 +41,6 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 # dependencies automatically when using CMake 2.8.11 or
 # later. Otherwise we have to add them here ourselves.
 
-##if (CMAKE_VERSION VERSION_LESS 2.8.11)
-##  include_directories("${gtest_SOURCE_DIR}/include")
-##endif()
-
-execute_process(COMMAND ls ./googletest-src ./googletest-src/googletest)
-
 message("Start making targets")
 
 # targets
@@ -66,10 +60,6 @@ set_target_properties(test_version PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
-##message("GInclude=${gtest_SOURCE_DIR}")
-##set_target_properties(gtest_version PROPERTIES
-##    INCLUDE_DIRECTORIES("${gtest_SOURCE_DIR}/include")
-##)
 
 target_link_libraries(helloworld_cli PRIVATE
     helloworld
