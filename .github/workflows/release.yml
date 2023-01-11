@@ -5,7 +5,7 @@
 
 name: 'CI_C++'
 env:
-  WORKDIR: "homework-2"
+  WORKDIR: "homework-1"
   
 on:
   push:
