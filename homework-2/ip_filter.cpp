@@ -41,7 +41,8 @@ int main (int argc, char const *argv[])
             std::vector<std::string> v = split(line, '\t');
             if (v.size() != 3)
             {
-                throw std::runtime_error {"Wrong file format - wrong number of line sections"};
+                std::cerr << "Wrong number of line sections in [" << line << "]\n";
+		throw std::runtime_error {"Stop processing because of Wrong file format"};
             }
             if ( inet_pton4 (v.at(0), tAddr))   // get ipv4 address
                 ip_pool.push_back(tAddr);       // put it into pool
