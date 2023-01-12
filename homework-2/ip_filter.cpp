@@ -26,11 +26,8 @@ std::vector<std::string> split(const std::string &str, char d)
     return r;
 }
 
-int main (int argc, char const *argv[])
+int main (/*int argc, char const *argv[]*/)
 {
-    (void)argc;
-    (void)argv;
-
     try
     {
         std::vector<uint32_t> ip_pool;       // the pool of ip addresses
