@@ -8,7 +8,7 @@
 #include <fstream>
 
 //
-// convert ipv4 addres from string to uint31_t
+// convert ipv4 address from string to uint32_t
 // inet_pton4 (src, dst)
 //    src - input  - string to convert from
 //    dst - output - uint32_t to convert to
@@ -30,14 +30,25 @@ bool inet_pton4 (
 
     for (nOctets = 0; nOctets < 4; ++nOctets)  // read octets
     {	
-	    getline (ss, item, '.');
-	    if (item.empty())	// no octet
+	getline (ss, item, '.');
+	if (item.empty())	// no octet
             return false;
-        octet = atoi (item.c_str());
+	try
+	{
+            octet = stoi (item);
+	}
+	catch (const std::exception& e)
+	{
+	    std::cerr << "Wrong ipv4 address format: " << src << '\n';
+	    return false;
+	}
         if (octet < 0 || octet > 255)   // invalid value
+	{
+	    std::cerr << "Wrong octet value " << octet << " in ipv4 address: " << src << '\n';
             return false;
+	}
         dst <<= 8; 
-	    dst += octet; 
+	dst += octet; 
     }
 
     return true;

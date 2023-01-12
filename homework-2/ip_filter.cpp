@@ -41,11 +41,15 @@ int main (int argc, char const *argv[])
             std::vector<std::string> v = split(line, '\t');
             if (v.size() != 3)
             {
-                throw std::runtime_error {"Wrong file format"};
+                throw std::runtime_error {"Wrong file format - wrong number of line sections"};
             }
             if ( inet_pton4 (v.at(0), tAddr))   // get ipv4 address
                 ip_pool.push_back(tAddr);       // put it into pool
-        }
+	    else
+	    {
+		throw std::runtime_error {"Stop processing because of wrong ipv4 address"};
+            }
+	}
 
         // sort pool reverse lexicographically
         std::sort (ip_pool.begin(), ip_pool.end(), std::greater<uint32_t>());
@@ -60,7 +64,7 @@ int main (int argc, char const *argv[])
         // ip = filter(1)
         for (auto ip : ip_pool)
         {
-            if (filter (ip, 1 ))
+            if (filter (ip, 1))
             {
                 print_ip (ip);
                 std::cout << std::endl;
