@@ -40,7 +40,6 @@ TEST(Helpers, inet_pton4)
 TEST(Helpers, Filter)
 {
     uint32_t    addr = 0xC0A80A07;  // 192.168.10.7
-    bool res;
 
     ASSERT_TRUE (filter (addr, 192));
     ASSERT_FALSE(filter (addr, 127));
