@@ -1,5 +1,8 @@
 // Google test for Helper functions
 
+#include <string>
+#include <cstdlib>
+
 #include "lib.h"
 
 #include <gtest/gtest.h>
