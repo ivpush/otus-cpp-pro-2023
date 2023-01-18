@@ -56,8 +56,8 @@ target_include_directories(helpers
 target_link_libraries(ip_filter PRIVATE
     helpers
 )
-target_link_libraries(gtest
-    gtest gtest_main
+target_link_libraries(gtest PRIVATE
+    gtest_main
     helpers
 )
 
