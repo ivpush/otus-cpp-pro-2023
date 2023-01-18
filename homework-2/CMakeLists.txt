@@ -42,7 +42,7 @@ message("Start making targets")
 # targets
 add_executable(ip_filter ip_filter.cpp)
 add_library(helpers lib.cpp)
-add_executable(gtest gtest.cpp)
+add_executable(test_helpers gtest.cpp)
 
 set_target_properties(ip_filter helpers PROPERTIES
     CXX_STANDARD 14
@@ -56,8 +56,8 @@ target_include_directories(helpers
 target_link_libraries(ip_filter PRIVATE
     helpers
 )
-target_link_libraries(gtest PRIVATE
-    gtest_main
+target_link_libraries(test_helpers PRIVATE
+    gtest gtest_main
     helpers
 )
 
@@ -68,7 +68,7 @@ if (MSVC)
     target_compile_options(helpers PRIVATE
         /W4
     )
-    target_compile_options(gtest PRIVATE
+    target_compile_options(test_helpers PRIVATE
         /W4
     )
 else ()
@@ -78,7 +78,7 @@ else ()
     target_compile_options(helpers PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
-    target_compile_options(gtest PRIVATE
+    target_compile_options(test_helpers PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
@@ -97,5 +97,5 @@ include(CPack)
 
 enable_testing()
 
-add_test(NAME gtest COMMAND gtest)
+add_test(NAME test_helpers COMMAND test_helpers)
 
