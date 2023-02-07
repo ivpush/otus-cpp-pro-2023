@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - run: cd ${{ WORKDIR }}
+    - run: cd ${{ env.WORKDIR }}
     
     # Build the HTML documentation
     - name: Doxygen Action
