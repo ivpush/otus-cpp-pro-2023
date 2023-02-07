@@ -93,7 +93,7 @@ struct is_container<typename std::vector<T>>: std::true_type {};
  - std::vector
  - std::list
  \param[in] container - данные для вывода/печати
- \tparam T - тип данных элементов контейнера
+ \tparam C - тип контейнера
  */
 
 template <typename C>
