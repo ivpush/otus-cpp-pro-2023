@@ -32,7 +32,6 @@
 //! @{
 
 /// \brief вывод одного байта ip-адреса.
-/// \details вывод одного байта ip-адреса.
 /// \param[in] ipAddr - данные для вывода/печати
 
 void print_ip_byte (int8_t ipAddr)
@@ -68,7 +67,6 @@ print_ip (T ipAddr)
 //! @{
 /*!
  \brief вывод ip-адреса из std::string
- \details выводит ip-адрес из std::string
  \param[in] ipAddr - данные для вывода/печати
  */
 
@@ -89,10 +87,14 @@ struct is_container<typename std::list<T>>: std::true_type {} ;
 template <class T>
 struct is_container<typename std::vector<T>>: std::true_type {};
 
-/// \brief вывод ip-адреса из элементов std::vector
-/// \details выводит/печатает ip-адрес из элементов std::vector
-/// \param[in] container - данные для вывода/печати
-/// \tparam T - тип данных элементов std::vector
+/*!
+ \brief вывод ip-адреса из элементов контейнера
+ \details выводит/печатает ip-адрес из элементов контейнеров
+ - std::vector
+ - std::list
+ \param[in] container - данные для вывода/печати
+ \tparam T - тип данных элементов контейнера
+ */
 
 template <typename C>
 typename std::enable_if<is_container<C>::value,void>::type 
@@ -114,7 +116,6 @@ print_ip (C & container)
 //! @{
 
 /// \brief проверяет что все элементы кортежа имеют одинаковый тип.
-/// \details проверяет что все элементы кортежа имеют одинаковый тип.
 /// \tparam Ts - тип кортежа для проверки.
 /// \return true если все элементы имеют одинаковый тип, иначе false
 template<typename ... Ts
@@ -125,7 +126,6 @@ constexpr bool is_monotype (std::tuple<Ts...>)
 }
 
 /// \brief выводит все элеметы кортежа.
-/// \details выводит все элеметы кортежа.
 /// \tparam Tp - тип кортежа для вывода
 /// \param tp - кортеж для вывода
 template<size_t I = 0, typename... Tp>
