@@ -5,7 +5,7 @@
 
 name: 'ALLOCATOR_C++'
 env:
-  WORKDIR: "homework-3"
+  WORKDIR: "homework-4"
   
 on:
   push:
