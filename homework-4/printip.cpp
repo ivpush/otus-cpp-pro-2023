@@ -74,18 +74,24 @@ void print_ip (std::string& ipAddr)
 {
     std::cout << ipAddr;
 }
+
+void print_ip (std::string ipAddr)
+{
+    std::cout << ipAddr;
+}
+
 //! @}
 
 //! \defgroup container-group (ip-address as a container)
 //! @{
-template <class T>
-struct is_container: std::false_type {};
+template <typename T>
+struct is_cont: std::false_type {};
 
-template <class T>
-struct is_container<typename std::list<T>>: std::true_type {} ;
+template <typename... Args>
+struct is_cont<std::list<Args...>>: std::true_type {} ;
 
-template <class T>
-struct is_container<typename std::vector<T>>: std::true_type {};
+template <typename... Args>
+struct is_cont<std::vector<Args...>>: std::true_type {};
 
 /*!
  \brief вывод ip-адреса из элементов контейнера
@@ -97,8 +103,23 @@ struct is_container<typename std::vector<T>>: std::true_type {};
  */
 
 template <typename C>
-typename std::enable_if<is_container<C>::value,void>::type 
-print_ip (C & container) 
+typename std::enable_if<is_cont<C>::value,void>::type 
+print_ip (C& container) 
+{
+    bool first = true;
+    for (auto ip : container)
+    {
+        if (first)  
+            first = false;
+        else
+            std::cout << ".";
+        std::cout << ip;
+    }
+}
+
+template <typename C>
+typename std::enable_if<is_cont<C>::value,void>::type 
+print_ip (C container) 
 {
     bool first = true;
     for (auto ip : container)
@@ -153,6 +174,14 @@ void print_tp (std::tuple<Tp...>& tp)
 /// выдается ошибка компиляции. 
 /// \tparam T - тип кортежа для вывода
 /// \param tp - кортеж для вывода/печати
+
+template <typename... T>
+void print_ip (std::tuple<T...> tp) 
+{
+    static_assert(is_monotype(std::tuple<T...>{}),
+                  "Tuple is not monotype.");  // monotype
+    print_tp (tp);
+}
 
 template <typename... T>
 void print_ip (std::tuple<T...>& tp) 
