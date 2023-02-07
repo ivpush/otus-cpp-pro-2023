@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 set(PATCH_VERSION "4" CACHE INTERNAL "Patch version")
-set(PROJECT_VESRION 0.0.${PATCH_VERSION})
+set(PROJECT_VESRION 0.1.${PATCH_VERSION})
 
 project(printip VERSION ${PROJECT_VESRION})
 
@@ -21,7 +21,7 @@ if (MSVC)
     )
 else ()
     target_compile_options(printip_cli PRIVATE
-        -Wall -Wextra -pedantic -Werror -std=c++17
+        -Wall -Wextra -pedantic -Werror
     )
 endif()
 
