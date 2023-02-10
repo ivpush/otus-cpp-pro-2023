@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>printIp Project: (ip-address as a tuple)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">printIp Project<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Documentation generated for printip.cpp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">(ip-address as a tuple)</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga0bf46f35672cb8bdfce4ff38d9aa35cf"><td class="memTemplParams" colspan="2">template&lt;typename ... Ts, typename T  = std::tuple_element_t&lt;0, std::tuple&lt;Ts...&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ga0bf46f35672cb8bdfce4ff38d9aa35cf"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__tuple-group.html#ga0bf46f35672cb8bdfce4ff38d9aa35cf">is_monotype</a> (std::tuple&lt; Ts... &gt;)</td></tr>
+<tr class="memdesc:ga0bf46f35672cb8bdfce4ff38d9aa35cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">проверяет что все элементы кортежа имеют одинаковый тип.  <br /></td></tr>
+<tr class="separator:ga0bf46f35672cb8bdfce4ff38d9aa35cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga253c6daa60f92e2a45ef603746a7f743"><td class="memTemplParams" colspan="2">template&lt;size_t I = 0, typename... Tp&gt; </td></tr>
+<tr class="memitem:ga253c6daa60f92e2a45ef603746a7f743"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__tuple-group.html#ga253c6daa60f92e2a45ef603746a7f743">print_tp</a> (std::tuple&lt; Tp... &gt; &amp;tp)</td></tr>
+<tr class="memdesc:ga253c6daa60f92e2a45ef603746a7f743"><td class="mdescLeft">&#160;</td><td class="mdescRight">выводит все элеметы кортежа.  <br /></td></tr>
+<tr class="separator:ga253c6daa60f92e2a45ef603746a7f743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12b8e07b76ded93225ba3c4eb634736f"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:ga12b8e07b76ded93225ba3c4eb634736f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__tuple-group.html#ga12b8e07b76ded93225ba3c4eb634736f">print_ip</a> (std::tuple&lt; T... &gt; tp)</td></tr>
+<tr class="memdesc:ga12b8e07b76ded93225ba3c4eb634736f"><td class="mdescLeft">&#160;</td><td class="mdescRight">вывод ip-адреса из элементов кортежа.  <br /></td></tr>
+<tr class="separator:ga12b8e07b76ded93225ba3c4eb634736f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b68a35d45736bd79636849c1448618d"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:ga9b68a35d45736bd79636849c1448618d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__tuple-group.html#ga9b68a35d45736bd79636849c1448618d">print_ip</a> (std::tuple&lt; T... &gt; &amp;tp)</td></tr>
+<tr class="separator:ga9b68a35d45736bd79636849c1448618d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="ga0bf46f35672cb8bdfce4ff38d9aa35cf" name="ga0bf46f35672cb8bdfce4ff38d9aa35cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0bf46f35672cb8bdfce4ff38d9aa35cf">&#9670;&#160;</a></span>is_monotype()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ... Ts, typename T  = std::tuple_element_t&lt;0, std::tuple&lt;Ts...&gt;&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_monotype </td>
+          <td>(</td>
+          <td class="paramtype">std::tuple&lt; Ts... &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>проверяет что все элементы кортежа имеют одинаковый тип. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Ts</td><td>- тип кортежа для проверки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если все элементы имеют одинаковый тип, иначе false </dd></dl>
+
+</div>
+</div>
+<a id="ga9b68a35d45736bd79636849c1448618d" name="ga9b68a35d45736bd79636849c1448618d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b68a35d45736bd79636849c1448618d">&#9670;&#160;</a></span>print_ip() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_ip </td>
+          <td>(</td>
+          <td class="paramtype">std::tuple&lt; T... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga12b8e07b76ded93225ba3c4eb634736f" name="ga12b8e07b76ded93225ba3c4eb634736f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12b8e07b76ded93225ba3c4eb634736f">&#9670;&#160;</a></span>print_ip() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_ip </td>
+          <td>(</td>
+          <td class="paramtype">std::tuple&lt; T... &gt;&#160;</td>
+          <td class="paramname"><em>tp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>вывод ip-адреса из элементов кортежа. </p>
+<p>выводит/печатает ip-адрес из элементов кортежа.<br  />
+На этапе компиляции производится проверка кортежа на монотипность - т.е. на то, что все элементы кортежа имеют одинаковый тип, и в случае немонотипности кортежа выдается ошибка компиляции. </p><dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>- тип кортежа для вывода </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tp</td><td>- кортеж для вывода/печати </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga253c6daa60f92e2a45ef603746a7f743" name="ga253c6daa60f92e2a45ef603746a7f743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga253c6daa60f92e2a45ef603746a7f743">&#9670;&#160;</a></span>print_tp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t I = 0, typename... Tp&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_tp </td>
+          <td>(</td>
+          <td class="paramtype">std::tuple&lt; Tp... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>выводит все элеметы кортежа. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>- тип кортежа для вывода </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tp</td><td>- кортеж для вывода </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

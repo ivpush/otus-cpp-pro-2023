@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>printIp Project: Файл homework-4/printip.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">printIp Project<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Documentation generated for printip.cpp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6eb4bea0cabc69a2923fdbac7f20cce4.html">homework-4</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл printip.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Program to print out ip-address from various source data.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__cont.html">is_cont&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__cont_3_01std_1_1list_3_01Args_8_8_8_01_4_01_4.html">is_cont&lt; std::list&lt; Args... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__cont_3_01std_1_1vector_3_01Args_8_8_8_01_4_01_4.html">is_cont&lt; std::vector&lt; Args... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga40f148d1afc8b260d9daef3b6def25db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__integer-group.html#ga40f148d1afc8b260d9daef3b6def25db">print_ip_byte</a> (int8_t ipAddr)</td></tr>
+<tr class="memdesc:ga40f148d1afc8b260d9daef3b6def25db"><td class="mdescLeft">&#160;</td><td class="mdescRight">вывод одного байта ip-адреса.  <br /></td></tr>
+<tr class="separator:ga40f148d1afc8b260d9daef3b6def25db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61abe7b8e5ec80538e43940d0b4b60ea"><td class="memTemplParams" colspan="2">template&lt;typename T , int N = sizeof(T)&gt; </td></tr>
+<tr class="memitem:ga61abe7b8e5ec80538e43940d0b4b60ea"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; T &gt;::value, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__integer-group.html#ga61abe7b8e5ec80538e43940d0b4b60ea">print_ip</a> (T ipAddr)</td></tr>
+<tr class="memdesc:ga61abe7b8e5ec80538e43940d0b4b60ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">выводит ip-адрес из простых типов данных.  <br /></td></tr>
+<tr class="separator:ga61abe7b8e5ec80538e43940d0b4b60ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0dd98b710bf07c7817b4251c5a609e99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string-group.html#ga0dd98b710bf07c7817b4251c5a609e99">print_ip</a> (std::string &amp;ipAddr)</td></tr>
+<tr class="memdesc:ga0dd98b710bf07c7817b4251c5a609e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">вывод ip-адреса из std::string  <br /></td></tr>
+<tr class="separator:ga0dd98b710bf07c7817b4251c5a609e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga759fba71defaf9fea2b9a05fea9e778b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string-group.html#ga759fba71defaf9fea2b9a05fea9e778b">print_ip</a> (std::string ipAddr)</td></tr>
+<tr class="separator:ga759fba71defaf9fea2b9a05fea9e778b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2ca344d18412b8e5eedd4fb04eefa9e"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
+<tr class="memitem:gae2ca344d18412b8e5eedd4fb04eefa9e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structis__cont.html">is_cont</a>&lt; C &gt;::value, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__container-group.html#gae2ca344d18412b8e5eedd4fb04eefa9e">print_ip</a> (C &amp;container)</td></tr>
+<tr class="memdesc:gae2ca344d18412b8e5eedd4fb04eefa9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">вывод ip-адреса из элементов контейнера  <br /></td></tr>
+<tr class="separator:gae2ca344d18412b8e5eedd4fb04eefa9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5064a1df18f8fb27c41f3ee7bef56a3"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
+<tr class="memitem:gac5064a1df18f8fb27c41f3ee7bef56a3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structis__cont.html">is_cont</a>&lt; C &gt;::value, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__container-group.html#gac5064a1df18f8fb27c41f3ee7bef56a3">print_ip</a> (C container)</td></tr>
+<tr class="separator:gac5064a1df18f8fb27c41f3ee7bef56a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0bf46f35672cb8bdfce4ff38d9aa35cf"><td class="memTemplParams" colspan="2">template&lt;typename ... Ts, typename T  = std::tuple_element_t&lt;0, std::tuple&lt;Ts...&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ga0bf46f35672cb8bdfce4ff38d9aa35cf"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__tuple-group.html#ga0bf46f35672cb8bdfce4ff38d9aa35cf">is_monotype</a> (std::tuple&lt; Ts... &gt;)</td></tr>
+<tr class="memdesc:ga0bf46f35672cb8bdfce4ff38d9aa35cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">проверяет что все элементы кортежа имеют одинаковый тип.  <br /></td></tr>
+<tr class="separator:ga0bf46f35672cb8bdfce4ff38d9aa35cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga253c6daa60f92e2a45ef603746a7f743"><td class="memTemplParams" colspan="2">template&lt;size_t I = 0, typename... Tp&gt; </td></tr>
+<tr class="memitem:ga253c6daa60f92e2a45ef603746a7f743"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__tuple-group.html#ga253c6daa60f92e2a45ef603746a7f743">print_tp</a> (std::tuple&lt; Tp... &gt; &amp;tp)</td></tr>
+<tr class="memdesc:ga253c6daa60f92e2a45ef603746a7f743"><td class="mdescLeft">&#160;</td><td class="mdescRight">выводит все элеметы кортежа.  <br /></td></tr>
+<tr class="separator:ga253c6daa60f92e2a45ef603746a7f743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12b8e07b76ded93225ba3c4eb634736f"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:ga12b8e07b76ded93225ba3c4eb634736f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__tuple-group.html#ga12b8e07b76ded93225ba3c4eb634736f">print_ip</a> (std::tuple&lt; T... &gt; tp)</td></tr>
+<tr class="memdesc:ga12b8e07b76ded93225ba3c4eb634736f"><td class="mdescLeft">&#160;</td><td class="mdescRight">вывод ip-адреса из элементов кортежа.  <br /></td></tr>
+<tr class="separator:ga12b8e07b76ded93225ba3c4eb634736f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b68a35d45736bd79636849c1448618d"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:ga9b68a35d45736bd79636849c1448618d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__tuple-group.html#ga9b68a35d45736bd79636849c1448618d">print_ip</a> (std::tuple&lt; T... &gt; &amp;tp)</td></tr>
+<tr class="separator:ga9b68a35d45736bd79636849c1448618d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81ce304348a420752ee080480d2b3095"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__test-group.html#ga81ce304348a420752ee080480d2b3095">main</a> (int, char *[])</td></tr>
+<tr class="memdesc:ga81ce304348a420752ee080480d2b3095"><td class="mdescLeft">&#160;</td><td class="mdescRight">драйвер тестирования.  <br /></td></tr>
+<tr class="separator:ga81ce304348a420752ee080480d2b3095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Program to print out ip-address from various source data. </p>
+<dl class="section author"><dt>Автор</dt><dd>Игорь Пушкин <a href="#" onclick="location.href='mai'+'lto:'+'ipu'+'sh'+'@ya'+'.r'+'u'; return false;">ipush<span class="obfuscator">.nosp@m.</span>@ya.<span class="obfuscator">.nosp@m.</span>ru</a> </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>feb 2023 </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>1.0</dd></dl>
+<p>OTUS C++ Developer Pro Course - homework #4 - print ip address.<br  />
+Данный файл содержит самостоятельную работу по курсу OTUS C++ Developer Pro.<br  />
+Задача - программа печати ip-адреса из разных типов данных.<br  />
+</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
